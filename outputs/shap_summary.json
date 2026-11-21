@@ -1,0 +1,110 @@
+{
+    "global_feature_importance": [
+        {
+            "Feature": "SKU_ID",
+            "Mean_Abs_SHAP": 1.1764885760427741
+        },
+        {
+            "Feature": "SKU_Age_Months",
+            "Mean_Abs_SHAP": 1.137391260371841
+        },
+        {
+            "Feature": "feat_seasonal_baseline",
+            "Mean_Abs_SHAP": 0.9208408370372779
+        },
+        {
+            "Feature": "Fuel_Price_Index",
+            "Mean_Abs_SHAP": 0.8866867992168916
+        },
+        {
+            "Feature": "ISM_Manufacturing_PMI_lag2",
+            "Mean_Abs_SHAP": 0.8377411949196338
+        },
+        {
+            "Feature": "Industrial_Util_Rate_Pct",
+            "Mean_Abs_SHAP": 0.6761008941597245
+        },
+        {
+            "Feature": "pmi_demand_multiplier",
+            "Mean_Abs_SHAP": 0.6278730877523789
+        },
+        {
+            "Feature": "ISM_Manufacturing_PMI_lag1",
+            "Mean_Abs_SHAP": 0.6092026656847723
+        },
+        {
+            "Feature": "ISM_Manufacturing_PMI",
+            "Mean_Abs_SHAP": 0.5851421663174292
+        },
+        {
+            "Feature": "Auto_Production_YoY_Pct_lag2",
+            "Mean_Abs_SHAP": 0.47190420293314334
+        }
+    ],
+    "macro_family_correlations": {
+        "Brake & Safety Systems": {
+            "ISM_Manufacturing_PMI": 0.016,
+            "Auto_Production_YoY_Pct": 0.026,
+            "Vehicle_Inventory_Days": 0.002,
+            "Raw_Material_Cost_Index": 0.001,
+            "New_Vehicle_Orders_Index": 0.025,
+            "Fuel_Price_Index": -0.013,
+            "EV_Adoption_Index": -0.004
+        },
+        "Chassis & Structural": {
+            "ISM_Manufacturing_PMI": 0.009,
+            "Auto_Production_YoY_Pct": 0.029,
+            "Vehicle_Inventory_Days": 0.017,
+            "Raw_Material_Cost_Index": -0.016,
+            "New_Vehicle_Orders_Index": 0.019,
+            "Fuel_Price_Index": -0.029,
+            "EV_Adoption_Index": -0.009
+        },
+        "Electrical Assemblies": {
+            "ISM_Manufacturing_PMI": 0.026,
+            "Auto_Production_YoY_Pct": 0.031,
+            "Vehicle_Inventory_Days": 0.003,
+            "Raw_Material_Cost_Index": 0.005,
+            "New_Vehicle_Orders_Index": 0.037,
+            "Fuel_Price_Index": -0.012,
+            "EV_Adoption_Index": 0.008
+        },
+        "Hydraulic Systems": {
+            "ISM_Manufacturing_PMI": 0.041,
+            "Auto_Production_YoY_Pct": 0.021,
+            "Vehicle_Inventory_Days": -0.035,
+            "Raw_Material_Cost_Index": 0.039,
+            "New_Vehicle_Orders_Index": 0.048,
+            "Fuel_Price_Index": 0.02,
+            "EV_Adoption_Index": -0.01
+        },
+        "Powertrain Components": {
+            "ISM_Manufacturing_PMI": 0.024,
+            "Auto_Production_YoY_Pct": 0.024,
+            "Vehicle_Inventory_Days": -0.011,
+            "Raw_Material_Cost_Index": 0.027,
+            "New_Vehicle_Orders_Index": 0.041,
+            "Fuel_Price_Index": 0.01,
+            "EV_Adoption_Index": -0.016
+        },
+        "Precision Machined Parts": {
+            "ISM_Manufacturing_PMI": 0.04,
+            "Auto_Production_YoY_Pct": 0.03,
+            "Vehicle_Inventory_Days": -0.006,
+            "Raw_Material_Cost_Index": 0.016,
+            "New_Vehicle_Orders_Index": 0.046,
+            "Fuel_Price_Index": -0.01,
+            "EV_Adoption_Index": -0.025
+        },
+        "Thermal Management": {
+            "ISM_Manufacturing_PMI": 0.035,
+            "Auto_Production_YoY_Pct": 0.026,
+            "Vehicle_Inventory_Days": 0.004,
+            "Raw_Material_Cost_Index": 0.007,
+            "New_Vehicle_Orders_Index": 0.028,
+            "Fuel_Price_Index": -0.019,
+            "EV_Adoption_Index": -0.038
+        }
+    },
+    "sample_size_evaluated": 500
+}

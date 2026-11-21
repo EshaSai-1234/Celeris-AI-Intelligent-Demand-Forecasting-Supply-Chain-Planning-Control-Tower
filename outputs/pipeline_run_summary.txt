@@ -1,0 +1,56 @@
+================================================================================
+    CELERIS AUTOMOBILI INDUSTRIAL: DEMAND FORECASTING CONTROL TOWER PIPELINE    
+================================================================================
+Execution started at: 2026-11-21 12:31:46
+
+[STEP 1/11] Running Data Cleaning & Quality Audit...
+-> Train records cleaned: 244,566 rows | Test records: 58,219 rows
+
+[STEP 2/11] Running Unconstrained Demand Reconstruction (Stockouts & Lost Sales)...
+-> Unconstrained demand reconstructed. Total lost demand recovered: 78,653 units
+
+[STEP 3/11] Running Anomaly Detection & Outlier Audit...
+-> Anomalies registered: 8,636 records
+
+[STEP 4/11] Running Feature Engineering Pipeline...
+-> Features engineered: 64 features (9 categorical)
+
+[STEP 5/11] Running Chronological Rolling-Origin Backtesting (3 Folds)...
+-> Top Model: LightGBM_Global | WAPE: 33.56% | Bias: -1.26% | MAE: 17.84
+
+[STEP 6/11] Training Final Production Forecasters (Global Point & Quantiles)...
+-> Fitting Production Global LightGBM Model...
+-> Fitting Production Quantile Models (P10, P50, P90)...
+
+[STEP 7/11] Generating 19-Month Test Set Forecasts...
+
+[STEP 8/11] Enforcing Product Lifecycle Constraints (Pre-Launch & Post-EOL)...
+
+[STEP 9/11] Executing Bottom-Up Hierarchical Demand Reconciliation...
+-> Reconciled forecasts saved to C:\Users\eshas\Downloads\Celeris AI – Intelligent Demand Forecasting & Supply Chain Planning Control Tower\outputs\reconciled_forecasts_detailed.csv
+
+[STEP 10/11] Computing SHAP Explainability & Multi-Echelon Inventory Plan...
+-> Inventory plan and SHAP feature importances generated successfully.
+
+[STEP 11/11] Validating and Writing Official Submission File...
+-> Official Submission CSV saved to C:\Users\eshas\Downloads\Celeris AI – Intelligent Demand Forecasting & Supply Chain Planning Control Tower\outputs\submission.csv
+   Total rows: 58,219 | Total forecasted volume: 3,024,343 units
+   Forecast Mean: 51.95 | Min: 0 | Max: 6549
+
+Pipeline runtime: 114.86 seconds (1.91 minutes)
+================================================================================
+                COMPLETE CELERIS AI PIPELINE EXECUTED SUCCESSFULLY!             
+================================================================================
+
+OUTPUT ARTIFACTS VERIFICATION:
+--------------------------------------------------
+1. submission.csv: 58,219 rows (58,219 verified, schema: Date, SKU_ID, Region, Units_Sold_Forecast)
+2. cleaned_train.csv: 244,566 rows
+3. cleaned_test.csv: 58,219 rows
+4. data_quality_report.xlsx: Generated
+5. anomaly_register.csv: 8,636 records
+6. model_comparison.csv & backtest_results.csv: Generated
+7. evaluation_metrics.txt: Generated
+8. inventory_plan.csv: 3,068 SKU-region plans
+9. shap_summary.json: Feature importances & macro correlations
+10. models/*.pkl: Production LightGBM point & quantile models saved
